@@ -1,11 +1,12 @@
 const form = document.querySelector('#form');
+const res = document.getElementById('result');
+const input = document.querySelector('#inputfield');
 let err = true;
 let resArr = [];
 let resIter = 0;
+let enter = false;
 
 form.addEventListener('submit', (e) => e.preventDefault())
-
-// let exp = input.addEventListener('input', (e) => e.target.value)
 
 const del = (input) => {
     const temp = input.value;
@@ -155,12 +156,11 @@ const divideNums = (exp) => {
 }
 
 const result = (exp) => {
+    enter = true;
     return divideNums(exp);
 }
 
 const btnClick = (e) => {
-    let res = document.getElementById('result');
-    let input = document.querySelector('#inputfield');
     switch (e.innerText) {
         case 'ans': printAns(input, res); break;
         case 'del': del(input); break;
@@ -195,9 +195,14 @@ const btnClick = (e) => {
                 res.innerHTML = r1;
                 resArr.push({ in: input.value, res: r1 });
             }
-            console.log(resArr)
             break;
-        case e.innerText: input.value += e.innerText; break;
+        case e.innerText:
+            if (enter) {
+                clear(input, res);
+                enter = false;
+            }
+            input.value += e.innerText;
+            break;
         default: break;
     }
 }

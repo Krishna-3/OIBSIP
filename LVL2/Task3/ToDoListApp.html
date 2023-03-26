@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./ToDoListApp.css">
+    <script src="./ToDoListApp.js" defer></script>
+    <title>To-Do App</title>
+</head>
+
+<body>
+    <!-- <i class="material-symbols-outlined">delete</i> -->
+    <header id="header">&nbsp;&nbsp;To-Do List App</header><br>
+    <div id="main">
+        <div id="sec4" class="sec">
+            <form action="" id="form">
+                <input type="text" placeholder="Title" maxlength="30" minlength="1" value="" id="input"
+                    class="grid-elements" />
+                <textarea placeholder="Description" value="" id="textarea" col="25" rows="15"
+                    class="grid-elements"></textarea>
+                <button id="add-btn" onclick="extractData()">Add to list</button>
+            </form>
+        </div>
+        <div id="result" class="sec">
+            <p id="r"></p>
+        </div>
+        <section id="sec1" class="sec">
+            <span id="todo-header">&nbsp;&nbsp;To-do List</span>
+            <main class="list">
+                <ul id="1">
+                </ul>
+            </main>
+        </section>
+        <div id="sec2" class="sec">
+            <span id="pending-header">&nbsp;&nbsp;Pending List</span>
+            <section class="list">
+                <ul id="2">
+                </ul>
+            </section>
+        </div>
+        <div id="sec3" class="sec">
+            <span id="completed-header">&nbsp;&nbsp;Completed List</span>
+            <section class="list">
+                <ul id="3">
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
