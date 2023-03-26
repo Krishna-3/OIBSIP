@@ -129,10 +129,10 @@ const createList = (data) => {
         result.style.backgroundColor = '#FFFFF0';
         if (task.check) {
             comDate = task.comDate;
-            result.innerHTML = `title:${task.title} description:${task.description} added on:${task.date} status: 'completed' completed on:${comDate} `;
+            r.innerHTML = `title:${task.title} | description:${task.description} | added on:${task.date} | status: 'completed' | completed on:${comDate} `;
         }
         else {
-            r.innerHTML = `title:${task.title} description:${task.description} added on:${task.date} status: not completed`;
+            r.innerHTML = `title:${task.title} | description:${task.description} | added on:${task.date} | status: not completed`;
         }
     })
     li.addEventListener('mouseout', (e) => {
@@ -147,10 +147,10 @@ const createList = (data) => {
         result.style.backgroundColor = '#FFFFF0';
         if (task.check) {
             comDate = task.comDate;
-            r.innerHTML = `title:${task.title} description:${task.description} added on:${task.date} status: 'completed' completed on:${comDate} `;
+            r.innerHTML = `title:${task.title} | description:${task.description} | added on:${task.date} | status: 'completed' | completed on:${comDate} `;
         }
         else {
-            r.innerHTML = `title:${task.title} description:${task.description} added on:${task.date} status: not completed`;
+            r.innerHTML = `title:${task.title} | description:${task.description} | added on:${task.date} | status: not completed`;
         }
     })
     penLi.addEventListener('mouseout', (e) => {
