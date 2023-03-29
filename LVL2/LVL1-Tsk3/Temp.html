@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./Temp.css">
+    <script src="./Temp.js" defer></script>
+    <title>Temperature Converter</title>
+</head>
+
+<body>
+    <section>
+        <header>
+            <div id="time-icons">
+                <span id="time"></span>
+                <section id="icons">
+                    <span class="material-symbols-outlined">signal_cellular_alt</span>
+                    <span class="material-symbols-outlined">wifi</span>
+                    <span class="material-symbols-outlined">battery_full_alt</span>
+                </section>
+            </div>
+            <h3>Temperature Converter</h3>
+        </header>
+        <main>
+            <form action="" id="form">
+                <div id="form">
+                    <section>
+                        <label class="lbl" for="deg">Degrees</label><br>
+                        <input class="in" type="text" value="" id="deg" />
+                    </section>
+                    <section>
+                        <label class="lbl" for="type">Type</label><br>
+                        <select class="in" name="Type" id="type">
+                            <option value="select">Select</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                            <option value="celcius">Celcius</option>
+                            <option value="kelvin">kelvin</option>
+                        </select>
+                    </section>
+                    <section id="res">
+                        <label id="r0" class="lbl" for="result">Result</label><br>
+                        <span class="res" id="r1">&nbsp;</span>
+                        <span class="res" id="r2">&nbsp;</span>
+                    </section>
+                    <button class="btn" id="cvt" onclick="convert()">Convert</button>
+                    <button class="btn" id="clr">Clear</button>
+                </div>
+            </form>
+        </main>
+    </section>
+</body>
+
+</html>
